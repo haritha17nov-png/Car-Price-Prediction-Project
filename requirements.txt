@@ -1,0 +1,6 @@
+pandas
+numpy
+streamlit
+scikit-learn
+xgboost
+ xgboost==1.8.4
