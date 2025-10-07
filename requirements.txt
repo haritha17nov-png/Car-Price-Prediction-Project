@@ -3,4 +3,4 @@ numpy
 streamlit
 scikit-learn
 xgboost
- xgboost==1.8.4
+xgboost==3.0.5
