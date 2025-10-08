@@ -3,6 +3,8 @@ import numpy as np
 import pickle as pk 
 import streamlit as st
 
+# Temp: trigger PR for Streamlit slider styling
+
 model = pk.load(open('model.pkl','rb'))
 
 st.set_page_config(page_title="Car Price Prediction", layout="centered")
