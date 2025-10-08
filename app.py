@@ -12,7 +12,7 @@ def add_bg_from_url():
         f"""
         <style>
         .stApp {{
-            background-image: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1350&q=80");
+            background-image: url("https://images.unsplash.com/photo-1683290578806-488d5b878dfb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
             background-size: cover;
             background-position: center;
         }}
@@ -23,7 +23,7 @@ def add_bg_from_url():
 
 add_bg_from_url()
 
-st.markdown("<h1 style='text-align: center; color: white;'>Car Price Prediction ML Model</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: white;'>Car Price Prediction </h1>", unsafe_allow_html=True)
 
 cars_data = pd.read_csv('Cardetails.csv')
 
@@ -34,14 +34,25 @@ cars_data['name'] = cars_data['name'].apply(get_brand_name)
 
 st.markdown("""
     <style>
-    /* Label color white */
-    label, .stSelectbox label {
-        color: white !important;
+        /* Label color white and bigger */
+        label, .stSelectbox label, .stSlider label {
+            color: white !important;
+            font-size: 20px !important;
     }
     /* Dropdown options color black */
     div[data-baseweb="select"] span {
         color: black !important;
     }
+    /* Slider track and value font bigger */
+        .stSlider > div > div > div:nth-child(2) {
+            height: 12px !important;  /* slider thickness */
+        }
+
+    /* Slider value text */
+        .stSlider div[data-baseweb="slider"] > div:last-child {
+            font-size: 18px !important;  /* value number size */
+            color: white !important;
+        }
     </style>
     """, unsafe_allow_html=True)
 
